@@ -436,3 +436,71 @@
     }
 
 }
+
+///////////////////////CALL TO ACTION///////////////////////
+.cta {
+    background-color: #fff;
+    text-transform: uppercase;
+    padding: 3.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__book-now {
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 300;
+        margin-bottom: 2.5rem;
+    }
+
+    &__btn {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        border-radius: 100px;
+        border: none;
+        color: #fff;
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        align-self: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: all .2s;
+
+        & > * {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            transition: all .2s;
+        }
+        
+        &--visible {
+            padding: 2rem 7.5rem;
+
+        }
+
+        &--invisible {
+            padding: 2rem 0rem;
+            position: absolute;
+            left: 0;
+            top: -100%;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        }
+
+        &:hover &--invisible {
+            top: 0%; 
+        }
+        
+        &:hover &--visible {
+            transform: translateY(100%); 
+        }
+
+        &:focus {
+            outline: none;
+            animation: pulsate 1s infinite;
+        }
+    }
+}
