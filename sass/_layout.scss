@@ -38,12 +38,12 @@
     display: flex;
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
+    font-size: 1.4rem;
     border-bottom: var(--line);
 }
 
 .description {  
     background-color: #fff;
-    font-size: 1.4rem;
     box-shadow: var(--shadow-light);
     padding: 3rem;
     flex: 0 0 60%; //Don't grow, don't shrink, and fill 60% of the container
@@ -51,8 +51,8 @@
 }
 
 .user-reviews {
-    background-color: #fff;
-    box-shadow: var(--shadow-light);
-
     flex: 1; //By setting this to 1 it will grow to occupy the remaining space
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
